@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Robonotas | Captação de XML e conferência fiscal para escritórios de contabilidade</title>
+<meta name="description" content="O Robonotas busca sozinho NF-e, CT-e, NFS-e e NFC-e das empresas que o seu escritório atende, usando o certificado A1 de cada uma. Tudo organizado no painel, com ZIP do mês, analytics, conferência fiscal, retenções e IBS/CBS. A partir de R$ 5,00 por CNPJ, sem limite de notas.">
+<meta name="theme-color" content="#9133D4">
+<link rel="canonical" href="https://robonotas.robolabs.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://robonotas.robolabs.com.br/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Robolabs">
+<meta property="og:title" content="Robonotas | Os XML das suas empresas chegam sozinhos">
+<meta property="og:description" content="Captação automática de NF-e, CT-e, NFS-e e NFC-e com o certificado A1 de cada empresa. Painel organizado, ZIP mensal, analytics com conferência fiscal, retenções e IBS/CBS por empresa.">
+<meta property="og:image" content="https://robonotas.robolabs.com.br/assets/img/og-image.jpg">
+<meta property="og:image:alt" content="Painel do Robonotas com o analytics de uma empresa de demonstração: faturamento e compras líquidos">
+<meta name="twitter:image" content="https://robonotas.robolabs.com.br/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/img/icon-robolabs.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.robolabs.com.br/#org",
+      "name": "Robolabs",
+      "legalName": "ROBOLABS DESENVOLVIMENTO DE SOFTWARE LTDA",
+      "taxID": "47.841.348/0001-75",
+      "url": "https://www.robolabs.com.br",
+      "logo": "https://www.robolabs.com.br/assets/images/logo-retangular.svg",
+      "email": "contato@robolabs.com.br",
+      "contactPoint": [
+        {"@type": "ContactPoint", "contactType": "sales", "email": "contato@robolabs.com.br", "telephone": "+55-12-3950-0730", "areaServed": "BR", "availableLanguage": "pt-BR"},
+        {"@type": "ContactPoint", "contactType": "customer support", "email": "suporte@robolabs.digital", "telephone": "+55-12-3950-0730", "areaServed": "BR", "availableLanguage": "pt-BR"}
+      ],
+      "telephone": "+55-12-3950-0730",
+      "address": {"@type": "PostalAddress", "addressLocality": "São José dos Campos", "addressRegion": "SP", "addressCountry": "BR"}
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Robonotas",
+      "url": "https://robonotas.robolabs.com.br/",
+      "image": "https://robonotas.robolabs.com.br/assets/img/og-image.jpg",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Captação automática de XML (NF-e, CT-e, NFS-e e NFC-e) para escritórios de contabilidade, com painel, exportação mensal, analytics por empresa, conferência fiscal, retenções e IBS/CBS.",
+      "publisher": {"@id": "https://www.robolabs.com.br/#org"},
+      "offers": {
+        "@type": "Offer",
+        "price": "5.00",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "5.00",
+          "priceCurrency": "BRL",
+          "unitText": "CNPJ por mês (faixa até 50 CNPJs; mensalidade mínima R$ 99)",
+          "billingIncrement": 1
+        }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topbar" id="topo">
+  <div class="wrap topbar__in">
+    <a class="brand" href="#topo" aria-label="Robonotas, da Robolabs — início">
+      <img src="assets/img/logo-robolabs.webp" alt="Robolabs" width="160" height="39">
+      <span class="brand__prod">Robonotas</span>
+    </a>
+    <button class="navtoggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="menu" class="nav" aria-label="Principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#conferencia">Conferência</a>
+      <a href="#precos">Preços</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn--sm" href="#contato">Agendar demonstração</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__txt">
+      <p class="eyebrow">Robonotas · para escritórios de contabilidade</p>
+      <h1>Os XML das suas empresas chegam <span class="hl">sozinhos</span>. Todo dia.</h1>
+      <p class="lead">O Robonotas usa o certificado A1 de cada cliente para buscar NF-e, CT-e, NFS-e e NFC-e direto na SEFAZ e no Ambiente Nacional, várias vezes ao dia. Sua equipe encontra tudo organizado e ainda ganha apoio na conferência: apontamentos fiscais nos XML, tributos destacados, retenções e IBS/CBS por empresa e período.</p>
+      <div class="ctas">
+        <a class="btn" data-wa href="https://wa.me/551239500730">Agendar demonstração</a>
+        <a class="btn btn--ghost" href="#precos">Ver preços</a>
+      </div>
+      <ul class="checks checks--inline">
+        <li>Sem limite de notas</li>
+        <li>Cobrança por CNPJ</li>
+        <li>Conferência fiscal incluída</li>
+        <li>Demonstração ao vivo</li>
+      </ul>
+    </div>
+    <figure class="hero__shot">
+      <button class="shot" data-full="assets/img/conf-totais.webp" data-caption="Analytics da empresa demonstração: faturamento e compras líquidos (sem devoluções), remessas e transferências em card próprio, documentos por tipo, tributos destacados e top CFOPs.">
+        <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Robonotas · Analytics</span></span>
+        <img src="assets/img/conf-totais-800.webp" srcset="assets/img/conf-totais-800.webp 800w, assets/img/conf-totais.webp 1500w" sizes="(min-width: 1000px) 620px, 100vw" width="800" height="753" alt="Painel do Robonotas com o analytics de uma empresa de demonstração: cartões de faturamento líquido, compras líquidas, ticket médio e remessas/transferências, gráfico de faturamento x compras por mês e tabelas de documentos por tipo e tributos destacados." fetchpriority="high"></span>
+      </button>
+      <figcaption>Painel real com dados fictícios da empresa de demonstração. Clique para ampliar.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 2. DOR -->
+<section class="sec" id="dor" aria-labelledby="dor-t">
+  <div class="wrap">
+    <p class="eyebrow">O dia a dia do fiscal</p>
+    <h2 id="dor-t">Fechar o mês não deveria começar com uma caça aos XML</h2>
+    <p class="sub">Se alguma destas situações parece familiar, o Robonotas foi feito para o seu escritório.</p>
+    <div class="cards cards--4">
+      <article class="card pain">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></span>
+        <h3>Um portal para cada nota</h3>
+        <p>Alguém da equipe entra em vários portais, empresa por empresa, para baixar XML de NF-e, CT-e e NFS-e. Todo mês, do zero.</p>
+      </article>
+      <article class="card pain">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 4v6m0 3v.5"/></svg></span>
+        <h3>A nota esquecida do fechamento</h3>
+        <p>Aquela nota que ninguém viu aparece justo na hora de fechar e obriga a refazer apuração, lançamentos e conferências.</p>
+      </article>
+      <article class="card pain">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z"/></svg></span>
+        <h3>Certificado vencido sem aviso</h3>
+        <p>O A1 do cliente vence, ninguém percebe e a busca de notas para. Quando o problema aparece, o mês já está atrasado.</p>
+      </article>
+      <article class="card pain">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></span>
+        <h3>Retrabalho que se repete</h3>
+        <p>Pedir XML ao cliente, conferir se chegou tudo, renomear, organizar pastas... trabalho repetitivo que toma o tempo de quem deveria analisar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. COMO FUNCIONA -->
+<section class="sec sec--soft" id="como-funciona" aria-labelledby="como-t">
+  <div class="wrap">
+    <p class="eyebrow">Como funciona</p>
+    <h2 id="como-t">Configure uma vez. O robô cuida do resto.</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__n" aria-hidden="true">1</span>
+        <h3>Cadastre a empresa</h3>
+        <p>Informe o CNPJ e envie o certificado A1 pelo próprio painel. Nada de mandar certificado por e-mail.</p>
+      </li>
+      <li class="step">
+        <span class="step__n" aria-hidden="true">2</span>
+        <h3>O robô capta sozinho</h3>
+        <p>Várias vezes ao dia, o Robonotas consulta a SEFAZ e o Ambiente Nacional, respeitando os limites de consulta para evitar bloqueio.</p>
+      </li>
+      <li class="step">
+        <span class="step__n" aria-hidden="true">3</span>
+        <h3>Tudo organizado no painel</h3>
+        <p>XML, PDF e eventos (cancelamentos, cartas de correção) ficam vinculados a cada nota, por empresa, tipo e entrada/saída.</p>
+      </li>
+      <li class="step">
+        <span class="step__n" aria-hidden="true">4</span>
+        <h3>Exporte, analise e confira</h3>
+        <p>Baixe o ZIP do mês com XML, PDF e planilhas, ou abra o analytics da empresa: totais, tributos, retenções e os apontamentos da conferência fiscal antes de fechar.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. FUNCIONALIDADES -->
+<section class="sec" id="funcionalidades" aria-labelledby="func-t">
+  <div class="wrap">
+    <p class="eyebrow">Funcionalidades</p>
+    <h2 id="func-t">Tudo o que o fiscal precisa para receber, organizar e entregar</h2>
+
+    <div class="feature-main">
+      <div>
+        <h3>Captação automática com o certificado A1 de cada empresa</h3>
+        <ul class="doclist">
+          <li><strong>NF-e (55) recebidas</strong> <span>Notas de entrada pela SEFAZ / Ambiente Nacional. Quando chega só o resumo, ele é trocado pelo XML completo depois.</span></li>
+          <li><strong>CT-e (57) e CT-e OS (67)</strong> <span>Conhecimentos em que a empresa participa, por exemplo como tomadora.</span></li>
+          <li><strong>NFS-e padrão nacional</strong> <span>Emitidas e tomadas, pelo Ambiente de Dados Nacional (municípios que usam o padrão nacional).</span></li>
+          <li><strong>NFC-e (65)</strong> <span>Emitidas por empresas de São Paulo.</span></li>
+          <li><strong>Eventos vinculados</strong> <span>Cancelamentos e cartas de correção ligados à nota certa.</span></li>
+        </ul>
+      </div>
+      <figure>
+        <button class="shot" data-full="assets/img/demo-documentos.webp" data-caption="Lista de documentos de todos os tipos, com filtros por empresa, período, tipo e papel, e download de XML e PDF.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Robonotas · Documentos</span></span>
+          <img src="assets/img/demo-documentos-800.webp" width="800" height="571" loading="lazy" alt="Lista de documentos do Robonotas com NF-e, NFC-e, CT-e e NFS-e da empresa de demonstração, mostrando emissão, tipo, número, emitente, destinatário, valor e links de XML e PDF."></span>
+        </button>
+        <figcaption>Todos os documentos da empresa em uma lista só, com filtros e download de XML/PDF.</figcaption>
+      </figure>
+    </div>
+
+    <div class="cards cards--3 feats">
+      <article class="card">
+        <h3>Importação manual de XML/ZIP</h3>
+        <p>Precisa incluir notas de saída que vêm do ERP? Importe XML ou ZIP pelo painel. O Robonotas valida assinatura e protocolo.</p>
+      </article>
+      <article class="card">
+        <h3>PDFs gerados na hora</h3>
+        <p>DANFE da NF-e, DANFE NFC-e (80 mm), DACTE e DANFSe gerados a partir do XML, sem depender de outro sistema.</p>
+      </article>
+      <article class="card">
+        <h3>Captação várias vezes ao dia</h3>
+        <p>O robô volta a consultar ao longo do dia e respeita os limites da SEFAZ, para a empresa não ser bloqueada por excesso de consultas.</p>
+      </article>
+      <article class="card">
+        <h3>Aviso de certificado vencendo</h3>
+        <p>Alerta por e-mail 60 e 30 dias antes do vencimento do A1, com link para enviar o certificado renovado pelo painel.</p>
+      </article>
+      <article class="card">
+        <h3>Painel de consultas SEFAZ/ADN</h3>
+        <p>Veja cada consulta feita e o retorno recebido. Quando algo não chegar, você sabe o porquê sem abrir chamado.</p>
+      </article>
+      <article class="card">
+        <h3>Exportação para o seu jeito de trabalhar</h3>
+        <p>Download individual de XML e PDF, listas em CSV/XLSX e o ZIP mensal por empresa, organizado por tipo e entrada/saída.</p>
+      </article>
+      <article class="card">
+        <h3>API REST somente leitura</h3>
+        <p>Para quem quer automatizar: chave por cliente criada e revogada no painel, documentação e filtro “alterados desde” para buscar só o que mudou. O bloco de tributos já traz as retenções e o IBS/CBS. 100% compatível via API com os demais robôs da Robolabs.</p>
+      </article>
+      <article class="card">
+        <h3>Cada colaborador com suas empresas</h3>
+        <p>Vários usuários na contabilidade, e cada um com a sua própria lista de empresas. Você define quem pode cadastrar empresas e certificados e quem só pode consultar e baixar notas.</p>
+      </article>
+      <article class="card">
+        <h3>Retenções e IBS/CBS onde você precisa</h3>
+        <p>Selo “Ret.” nas listas de notas, colunas de retenção e de IBS/CBS na planilha do ZIP e no bloco de tributos da API, e IBS/CBS também no DACTE. <a href="#tributos">Veja como funciona</a>.</p>
+      </article>
+    </div>
+
+    <div class="zipbox">
+      <div>
+        <h3>O ZIP do mês, pronto para entregar</h3>
+        <p>Um arquivo por empresa e por mês, com os XML, os PDFs (opcional), a planilha de lançamentos em XLSX e o resumo do mês. Eventos podem entrar também. A NFS-e entra pela competência; os demais documentos, pela data de emissão.</p>
+        <ul class="checks">
+          <li>Organizado por Tipo / Entrada-Saída</li>
+          <li>Planilha de lançamentos (XLSX) em cada pasta, com colunas de retenção e de IBS/CBS</li>
+          <li>Resumo do mês em planilha</li>
+        </ul>
+      </div>
+      <pre class="tree" aria-label="Exemplo de estrutura de pastas do ZIP mensal"><span class="tree__root">📦 ZIP do mês · 09/2026</span>
+├── <b>NFe/</b>
+│   ├── <b>Entrada/</b>  XML · PDF · XLSX
+│   └── <b>Saida/</b>    XML · PDF · XLSX
+├── <b>NFCe/</b>
+│   └── <b>Saida/</b>    XML · PDF · XLSX
+├── <b>CTe/</b>
+│   └── <b>Entrada/</b>  XML · PDF · XLSX
+├── <b>NFSe/</b>
+│   ├── <b>Entrada/</b>  XML · PDF · XLSX
+│   └── <b>Saida/</b>    XML · PDF · XLSX
+├── Resumo_202609.xlsx
+└── LEIA-ME.txt</pre>
+    </div>
+  </div>
+</section>
+
+<!-- 5. ANALYTICS -->
+<section class="sec sec--dark" id="analytics" aria-labelledby="ana-t">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--light">Analytics por empresa</p>
+    <h2 id="ana-t">Entenda o mês do cliente antes de fechar</h2>
+    <p class="sub">Os XML já estão lá, então o Robonotas transforma tudo em números para o contador. Filtre por empresa, por período (mês, trimestre, ano ou intervalo) e por entrada/saída. A natureza de cada nota é identificada pelo CFOP e pela finalidade da nota.</p>
+    <ul class="checks checks--light checks--cols">
+      <li>Faturamento líquido: vendas menos devoluções de venda</li>
+      <li>Compras líquidas: compras menos devoluções de compra</li>
+      <li>Remessas, transferências e outras naturezas fora dos totais, em card próprio</li>
+      <li>Comparação com o mês anterior e o mesmo mês do ano anterior</li>
+      <li>Tributos destacados, tributos retidos e IBS/CBS por mês</li>
+      <li>Rankings top 10 em XLSX, sem devoluções e remessas (com opção de incluir)</li>
+    </ul>
+    <div class="gallery">
+      <figure>
+        <button class="shot" data-full="assets/img/conf-totais.webp" data-caption="Visão geral com totais líquidos: faturamento = vendas − devoluções de venda; compras = compras − devoluções de compra; remessas, transferências e outras naturezas em card próprio. Comparação com o mês anterior e com o mesmo mês do ano anterior.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Analytics · Visão geral</span></span>
+          <img src="assets/img/conf-totais-800.webp" width="800" height="753" loading="lazy" alt="Visão geral do analytics com faturamento líquido e compras líquidas comparados ao mês anterior e ao mesmo mês do ano anterior, e card de remessas e transferências fora dos totais."></span>
+        </button>
+        <figcaption><strong>Totais líquidos.</strong> Devoluções descontadas, remessas e transferências à parte, com comparação automática com o mês anterior e o mesmo mês do ano anterior.</figcaption>
+      </figure>
+      <figure>
+        <button class="shot" data-full="assets/img/demo-analytics-rankings.webp" data-caption="Rankings top 10: fornecedores, clientes, produtos por valor e quantidade (com NCM), serviços, prestadores, transportadoras e municípios/UF. Todos exportáveis em XLSX.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Analytics · Rankings</span></span>
+          <img src="assets/img/demo-analytics-rankings-800.webp" width="800" height="657" loading="lazy" alt="Rankings do analytics com top 10 fornecedores, prestadores de serviço, clientes e tomadores da empresa de demonstração."></span>
+        </button>
+        <figcaption><strong>Rankings top 10.</strong> Fornecedores, clientes, produtos (com NCM), serviços, prestadores, transportadoras e municípios/UF.</figcaption>
+      </figure>
+      <figure>
+        <button class="shot" data-full="assets/img/demo-analytics-insights.webp" data-caption="Insights automáticos: variação acima do limite configurado, concentração, fornecedores e clientes novos, notas só com resumo e notas fora do prazo de ciência.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Analytics · Insights</span></span>
+          <img src="assets/img/demo-analytics-insights-800.webp" width="800" height="579" loading="lazy" alt="Tela de insights com alerta de variação do faturamento acima de 30%, concentração em um prestador de serviço, fornecedor novo no período e os indicadores de notas só com resumo e fora do prazo de ciência."></span>
+        </button>
+        <figcaption><strong>Insights automáticos.</strong> Fornecedor ou cliente novo, variação de ±30% (configurável), concentração, notas só com resumo e fora do prazo de ciência.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 5b. CONFERÊNCIA FISCAL -->
+<section class="sec" id="conferencia" aria-labelledby="conf-t">
+  <div class="wrap">
+    <p class="eyebrow">Novo no Analytics · Conferência fiscal</p>
+    <h2 id="conf-t">Saiba o que vale conferir nos XML antes de fechar o mês</h2>
+    <p class="sub">A Conferência fiscal é uma aba do Analytics. Por empresa e período, ela lê os XML de entrada e de saída e aponta o que merece um segundo olhar. São 10 verificações em 6 temas.</p>
+
+    <div class="feature-main conf">
+      <div>
+        <ul class="doclist">
+          <li><strong>ICMS-ST</strong> <span>ST destacado com CFOP que não é de ST, e CFOP de ST sem ICMS-ST.</span></li>
+          <li><strong>CFOP x UF</strong> <span>CFOP incompatível com a UF ou com o destino da operação (interna ou interestadual).</span></li>
+          <li><strong>Alíquota e DIFAL</strong> <span>Alíquota interestadual fora do padrão, venda interestadual a não contribuinte sem DIFAL e compra interestadual de uso e consumo ou ativo (DIFAL na entrada).</span></li>
+          <li><strong>Revenda x uso e consumo</strong> <span>Compra que parece de uso e consumo ou ativo. Não aponta quando a empresa também vende o item.</span></li>
+          <li><strong>NCM</strong> <span>NCM ausente ou inválido.</span></li>
+          <li><strong>Cancelamentos e duplicidades</strong> <span>Cancelamento fora do prazo ou em outro mês, e possíveis notas duplicadas.</span></li>
+        </ul>
+      </div>
+      <figure>
+        <button class="shot" data-full="assets/img/conf-visao.webp" data-caption="Conferência fiscal: os 6 temas com a contagem de apontamentos por severidade e, abaixo, o detalhe de cada análise com o encontrado e o esperado.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Analytics · Conferência fiscal</span></span>
+          <img src="assets/img/conf-visao-800.webp" srcset="assets/img/conf-visao-800.webp 800w, assets/img/conf-visao.webp 1500w" sizes="(min-width: 1000px) 640px, 100vw" width="800" height="641" loading="lazy" alt="Aba Conferência fiscal do Robonotas com cartões por tema (ICMS-ST, CFOP x UF, Alíquota/DIFAL, Revenda x uso e consumo, NCM, Cancelamentos e duplicidades) e a tabela de um apontamento de ICMS-ST destacado com CFOP sem ST."></span>
+        </button>
+        <figcaption>Os 6 temas em cartões, com a contagem por severidade. Clique para ampliar.</figcaption>
+      </figure>
+    </div>
+
+    <div class="sev" aria-label="Severidades dos apontamentos">
+      <span class="sev__t">Cada apontamento tem uma severidade:</span>
+      <span class="chip chip--err">erro provável</span>
+      <span class="chip chip--ver">verificar</span>
+      <span class="chip chip--sug">sugestão</span>
+    </div>
+
+    <div class="details">
+      <figure>
+        <button class="shot" data-full="assets/img/conf-difal.webp" data-caption="Venda interestadual a não contribuinte sem DIFAL: o que foi encontrado na nota e o que era esperado.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Alíquota e DIFAL</span></span>
+          <img src="assets/img/conf-difal.webp" width="1500" height="213" loading="lazy" alt="Apontamento de venda interestadual a não contribuinte sem DIFAL, com severidade erro provável, documento, contraparte, CFOP, encontrado e esperado."></span>
+        </button>
+        <figcaption><strong>Encontrado x esperado.</strong> Cada apontamento mostra a nota, o que foi encontrado e o que era esperado, com link para a nota e o DANFE.</figcaption>
+      </figure>
+      <figure>
+        <button class="shot" data-full="assets/img/conf-duplic.webp" data-caption="Possíveis duplicidades: mesmo número de nota em chaves diferentes.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Cancelamentos e duplicidades</span></span>
+          <img src="assets/img/conf-duplic.webp" width="1500" height="316" loading="lazy" alt="Apontamento de possíveis notas duplicadas: mesma nota em duas chaves diferentes, com severidade erro provável."></span>
+        </button>
+        <figcaption><strong>Possíveis duplicidades.</strong> A mesma nota em chaves diferentes aparece antes de virar retrabalho.</figcaption>
+      </figure>
+      <figure>
+        <button class="shot" data-full="assets/img/conf-dispensa.webp" data-caption="Apontamentos de revenda x uso e consumo com a opção “mostrar dispensados”: o apontamento dispensado fica visível, com o registro de quem dispensou.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Revenda x uso e consumo</span></span>
+          <img src="assets/img/conf-dispensa.webp" width="1500" height="363" loading="lazy" alt="Apontamentos de compra que parece uso e consumo ou ativo, com um apontamento dispensado exibido pela opção mostrar dispensados."></span>
+        </button>
+        <figcaption><strong>Dispensa com motivo.</strong> Dispense um apontamento informando o motivo; fica registrado quem dispensou, e dá para ver de novo em “mostrar dispensados”.</figcaption>
+      </figure>
+    </div>
+
+    <ul class="checks checks--cols conf__checks">
+      <li>Por empresa e período, nos XML de entrada e saída</li>
+      <li>Exporta CSV por análise e XLSX com todas</li>
+      <li>Cada contabilidade vê só as próprias empresas</li>
+    </ul>
+    <p class="note"><strong>Apoio à conferência, não substitui a revisão do contador.</strong> A Conferência fiscal usa regras gerais e não considera regimes especiais nem benefícios por UF. Ela aponta o que vale conferir; a análise e a decisão continuam com o seu escritório.</p>
+  </div>
+</section>
+
+<!-- 5c. RETENÇÕES E IBS/CBS -->
+<section class="sec sec--soft" id="tributos" aria-labelledby="trib-t">
+  <div class="wrap">
+    <p class="eyebrow">Retenções e IBS/CBS</p>
+    <h2 id="trib-t">Tributos retidos e IBS/CBS sem abrir nota por nota</h2>
+    <div class="feature-main">
+      <div>
+        <ul class="doclist">
+          <li><strong>Selo “Ret.” nas listas</strong> <span>Nas listas de NF-e, NFS-e, CT-e e Documentos, só nas notas com retenção. Ao passar o mouse, aparece cada imposto retido com base, percentual e valor.</span></li>
+          <li><strong>Cada retenção identificada</strong> <span>ISS retido, IRRF, INSS/CP, PIS, COFINS, CSLL, PIS/COFINS/CSLL somados na NFS-e nacional e ICMS-ST retido no CT-e.</span></li>
+          <li><strong>Filtro “Com retenção”</strong> <span>Liste só as notas com retenção, direto nas listas.</span></li>
+          <li><strong>Quadros no Analytics</strong> <span>“Tributos destacados” e “Tributos retidos”, de saídas e entradas, por empresa e período.</span></li>
+        </ul>
+      </div>
+      <figure>
+        <button class="shot" data-full="assets/img/ret-selo.webp" data-caption="Lista de NFS-e com o selo “Ret.” nas notas com retenção e o detalhe ao passar o mouse: cada imposto retido com base, percentual e valor.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Robonotas · NFS-e</span></span>
+          <img src="assets/img/ret-selo-800.webp" srcset="assets/img/ret-selo-800.webp 800w, assets/img/ret-selo.webp 1500w" sizes="(min-width: 1000px) 640px, 100vw" width="800" height="427" loading="lazy" alt="Lista de NFS-e com o selo Ret. e a caixa de detalhe mostrando INSS retido, PIS/COFINS/CSLL retidos, ISS retido pelo tomador e IRRF retido, com base, percentual e valor."></span>
+        </button>
+        <figcaption>Selo “Ret.” com o detalhe de cada retenção ao passar o mouse.</figcaption>
+      </figure>
+    </div>
+
+    <div class="ibs">
+      <div class="ibs__txt">
+        <span class="badge">Reforma tributária</span>
+        <h3>IBS e CBS por mês</h3>
+        <p>O quadro “IBS e CBS por mês” mostra o IBS UF, o IBS Municipal e a CBS destacados nas notas, de saídas e entradas. As colunas de retenção e de IBS/CBS também entram na planilha do ZIP e no bloco de tributos da API, e o IBS/CBS aparece no DACTE.</p>
+      </div>
+      <figure>
+        <button class="shot" data-full="assets/img/ret-tributos.webp" data-caption="Quadros do Analytics: Tributos destacados (incluindo IBS UF, IBS Município e CBS), Tributos retidos de saídas e entradas, e IBS e CBS por mês.">
+          <span class="browser"><span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span class="browser__url">Analytics · Tributos</span></span>
+          <img src="assets/img/ret-tributos-800.webp" srcset="assets/img/ret-tributos-800.webp 800w, assets/img/ret-tributos.webp 1500w" sizes="(min-width: 1000px) 700px, 100vw" width="800" height="401" loading="lazy" alt="Quadros de tributos destacados, tributos retidos (saídas e entradas) e IBS e CBS por mês, com IBS UF, IBS Municipal e CBS."></span>
+        </button>
+        <figcaption>Tributos destacados, tributos retidos e IBS/CBS por mês, lado a lado.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6. SEGURANÇA -->
+<section class="sec" id="seguranca" aria-labelledby="seg-t">
+  <div class="wrap seg">
+    <div>
+      <p class="eyebrow">Segurança e controle</p>
+      <h2 id="seg-t">O certificado do seu cliente em boas mãos</h2>
+      <p class="sub">O certificado fica guardado no servidor próprio da Robolabs, com acesso restrito, e não passa por e-mail nem por terceiros.</p>
+    </div>
+    <ul class="seglist">
+      <li><h3>Servidor próprio da Robolabs</h3><p>O Robonotas roda em servidor próprio da Robolabs, não em nuvem de terceiros, e é publicado com segurança pelo Cloudflare.</p></li>
+      <li><h3>Login protegido</h3><p>Acesso ao painel web com login por e-mail, protegido pelo Cloudflare Access.</p></li>
+      <li><h3>Cada um vê o que deve</h3><p>Cada colaborador tem a sua própria lista de empresas e só enxerga essas. E você define quem pode cadastrar empresas e certificados e quem só pode consultar e baixar notas.</p></li>
+      <li><h3>Auditoria de tudo</h3><p>Cada ação fica registrada com o e-mail de quem fez. Sem “alguém mexeu aqui”.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. PROVA SOCIAL -->
+<section class="sec sec--soft" id="depoimentos" aria-labelledby="dep-t">
+  <div class="wrap">
+    <p class="eyebrow">Quem usa a Robolabs</p>
+    <h2 id="dep-t">Contabilidades que deixaram o trabalho repetitivo com o robô</h2>
+    <div class="quotes">
+      <figure class="quote quote--main">
+        <blockquote><p>“Empresa presta um excelente serviço, sempre em busca de novas soluções e preocupada com o cliente. A ferramenta de importação das notas fiscais, tem nos ajudado muito, e não sendo mais necessário que cada colaborador realize esse processo, diminuindo o tempo do fechamento fiscal.”</p></blockquote>
+        <figcaption><strong>Erika Zandonadi</strong><span>Cliente Robolabs</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>“Com a Robolabs tivemos a oportunidade de redefinir nossa rotina de trabalho no Escritório! Encontrar uma demanda de trabalho pronta, correta, do jeito que queremos, e em questão de horas ou de um dia para o outro (o que antes levava dias para terminar) parece um sonho!”</p></blockquote>
+        <figcaption><strong>Gisleine Perez</strong><span>Cliente Robolabs</span></figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote><p>“Os sistemas prometiam muita coisa, mas, na prática não cumpriam o que prometiam, faziam parcialmente o que eu gostaria. Na contabilidade há muito trabalho repetitivo... Conversamos com vocês e vocês conseguiram criar as robotizações do jeito que gostaríamos.”</p></blockquote>
+        <figcaption><strong>Maike Santos</strong><span>Cliente Robolabs</span></figcaption>
+      </figure>
+    </div>
+    <div class="cred">
+      <img src="assets/img/icon-robolabs.svg" alt="" width="56" height="53" loading="lazy">
+      <p><strong>Feita por quem conhece a rotina contábil.</strong> Os fundadores da Robolabs vieram de escritório contábil. A empresa nasceu no Parque de Inovação Tecnológica de São José dos Campos, passou pelos programas Nexus Lab, Nexus Growth Digital (graduada em dezembro de 2023) e Nexus ScaleUp, e foi acelerada pelo Sebrae for Startups em 2024.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. PREÇOS -->
+<section class="sec" id="precos" aria-labelledby="preco-t">
+  <div class="wrap">
+    <p class="eyebrow">Preços</p>
+    <h2 id="preco-t">Preço por CNPJ. Notas ilimitadas.</h2>
+    <p class="sub">Cobrança mensal por empresa monitorada, sem limite de notas. Quanto mais CNPJs, menor o preço das faixas seguintes.</p>
+    <div class="pricing">
+      <div class="tiers" role="table" aria-label="Faixas de preço por CNPJ">
+        <div class="tier" role="row"><span role="cell" class="tier__range">Até 50 CNPJs</span><span role="cell" class="tier__price">R$ 5,00 <small>/CNPJ/mês</small></span></div>
+        <div class="tier" role="row"><span role="cell" class="tier__range">51 a 200 CNPJs</span><span role="cell" class="tier__price">R$ 4,00 <small>/CNPJ/mês</small></span></div>
+        <div class="tier" role="row"><span role="cell" class="tier__range">201 a 500 CNPJs</span><span role="cell" class="tier__price">R$ 3,00 <small>/CNPJ/mês</small></span></div>
+        <div class="tier" role="row"><span role="cell" class="tier__range">Acima de 500 CNPJs</span><span role="cell" class="tier__price tier__price--q">Sob consulta</span></div>
+        <p class="tiers__note">Faixas progressivas: cada faixa tem o seu preço. Exemplo: 120 CNPJs = 50 × R$ 5,00 + 70 × R$ 4,00 = <strong>R$ 530,00/mês</strong>. Mensalidade mínima de R$ 99,00. <strong>10% de desconto</strong> no plano anual pago à vista.</p>
+        <div class="tiers__extra">
+          <div><span>Implantação</span><strong>R$ 347,00</strong><small>valor fixo, cobrado uma vez</small></div>
+          <div><span>Fidelidade</span><strong>Sem fidelidade</strong><small>cancele com aviso prévio de 30 dias</small></div>
+        </div>
+      </div>
+      <form class="calc" id="calc" aria-labelledby="calc-t" onsubmit="return false">
+        <h3 id="calc-t">Simule o seu escritório</h3>
+        <label for="cnpjs">Quantos CNPJs você quer monitorar?</label>
+        <input id="cnpjs" name="cnpjs" type="number" inputmode="numeric" min="1" max="100000" step="1" value="120">
+        <div class="calc__out" aria-live="polite">
+          <div><span>Mensal</span><strong id="out-mes">R$ 530,00</strong></div>
+          <div><span>Anual à vista (−10%)</span><strong id="out-ano">R$ 5.724,00</strong></div>
+          <p id="out-det" class="calc__det">50 × R$ 5,00 + 70 × R$ 4,00</p>
+        </div>
+        <a class="btn btn--block" data-wa href="https://wa.me/551239500730">Falar com a Robolabs</a>
+      </form>
+    </div>
+    <ul class="checks checks--cols incl">
+      <li>Todas as funcionalidades atuais incluídas</li>
+      <li>Vários usuários, cada um com suas empresas</li>
+      <li>Analytics e ZIP mensal</li>
+      <li>Conferência fiscal, retenções e IBS/CBS</li>
+      <li>API REST somente leitura</li>
+      <li>Suporte por WhatsApp e e-mail</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="sec sec--soft" id="faq" aria-labelledby="faq-t">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow">Dúvidas frequentes</p>
+    <h2 id="faq-t">Perguntas que os contadores sempre fazem</h2>
+    <div class="faq">
+      <details>
+        <summary>Quais documentos o Robonotas capta automaticamente?</summary>
+        <p>NF-e (modelo 55) recebidas pela empresa; CT-e (57) e CT-e OS (67) em que a empresa participa, por exemplo como tomadora; NFS-e do padrão nacional, emitidas e tomadas; NFC-e (65) emitidas por empresas de São Paulo; e os eventos dessas notas, como cancelamentos e cartas de correção.</p>
+      </details>
+      <details>
+        <summary>A NFS-e funciona para qualquer município?</summary>
+        <p>Não. A NFS-e é captada pelo Ambiente de Dados Nacional, então funciona apenas para municípios que usam o padrão nacional da NFS-e. Notas de municípios com sistema próprio não chegam por esse caminho.</p>
+      </details>
+      <details>
+        <summary>E as NF-e de saída emitidas pelo cliente?</summary>
+        <p>As NF-e de saída não são captadas automaticamente. Você pode importar o XML ou um ZIP vindo do ERP do cliente pelo painel. O Robonotas valida assinatura e protocolo e organiza junto com as demais notas, inclusive no ZIP do mês e no analytics.</p>
+      </details>
+      <details>
+        <summary>O que acontece quando chega só o resumo da NF-e?</summary>
+        <p>Às vezes a SEFAZ entrega primeiro apenas o resumo da nota. O Robonotas troca esse resumo pelo XML completo assim que ele fica disponível, e o analytics mostra quantas notas ainda estão só com resumo.</p>
+      </details>
+      <details>
+        <summary>Que certificado eu preciso?</summary>
+        <p>O certificado digital A1 de cada empresa, enviado pelo próprio painel. O Robonotas avisa por e-mail 60 e 30 dias antes do vencimento, com link para enviar o certificado renovado.</p>
+      </details>
+      <details>
+        <summary>A empresa corre risco de bloqueio na SEFAZ?</summary>
+        <p>O robô consulta várias vezes ao dia, mas respeita os limites de consulta da SEFAZ justamente para evitar bloqueio. E no painel de consultas você vê cada consulta feita e o retorno recebido.</p>
+      </details>
+      <details>
+        <summary>O que a Conferência fiscal verifica?</summary>
+        <p>São 10 verificações em 6 temas, nos XML de entrada e saída da empresa no período: ICMS-ST (ST destacado com CFOP que não é de ST, e CFOP de ST sem ICMS-ST); CFOP x UF (CFOP incompatível com a UF ou com o destino); alíquota e DIFAL (alíquota interestadual fora do padrão, venda interestadual a não contribuinte sem DIFAL e compra interestadual de uso e consumo ou ativo); revenda x uso e consumo (compra que parece de uso e consumo ou ativo, sem apontar quando a empresa também vende o item); NCM ausente ou inválido; e cancelamentos e duplicidades (cancelamento fora do prazo ou em outro mês, e possíveis notas duplicadas). Cada apontamento vem como “erro provável”, “verificar” ou “sugestão”, e dá para exportar CSV por análise ou XLSX com todas.</p>
+      </details>
+      <details>
+        <summary>A Conferência fiscal substitui a revisão do contador?</summary>
+        <p>Não. Ela é um apoio à conferência: usa regras gerais e não considera regimes especiais nem benefícios por UF. Por isso pode apontar algo que, no caso daquela empresa, está correto, e não garante que todo erro será encontrado. Quando um apontamento não se aplica, você pode dispensá-lo informando o motivo; fica registrado quem dispensou, e a opção “mostrar dispensados” traz de volta o que foi dispensado.</p>
+      </details>
+      <details>
+        <summary>O Robonotas já mostra IBS e CBS?</summary>
+        <p>Sim, os valores de IBS e CBS destacados nas notas. O Analytics tem o quadro “IBS e CBS por mês”, com IBS UF, IBS Municipal e CBS. As colunas de IBS/CBS também entram na planilha do ZIP e no bloco de tributos da API, e o IBS/CBS aparece no DACTE.</p>
+      </details>
+      <details>
+        <summary>Como vejo as notas com retenção?</summary>
+        <p>Nas listas de NF-e, NFS-e, CT-e e Documentos, as notas com retenção ganham o selo “Ret.”. Ao passar o mouse, você vê cada imposto retido com base, percentual e valor: ISS retido, IRRF, INSS/CP, PIS, COFINS, CSLL, PIS/COFINS/CSLL somados na NFS-e nacional e ICMS-ST retido no CT-e. Há também o filtro “Com retenção” nas listas e o quadro “Tributos retidos” no Analytics, de saídas e entradas.</p>
+      </details>
+      <details>
+        <summary>Integra com o meu sistema contábil?</summary>
+        <p>A integração é feita pelos arquivos: o ZIP mensal com XML, PDF e planilhas, o download de XML/PDF e as listas em CSV/XLSX, que o seu sistema já sabe importar. Para quem quer automatizar, há uma API REST somente leitura com chave por cliente, e o Robonotas é 100% compatível via API com os demais robôs da Robolabs.</p>
+      </details>
+      <details>
+        <summary>Onde ficam os dados e o certificado?</summary>
+        <p>No servidor próprio da Robolabs, não em nuvem de terceiros, publicado com segurança pelo Cloudflare. O certificado fica guardado nesse servidor, com acesso restrito, e não passa por e-mail nem por terceiros.</p>
+      </details>
+      <details>
+        <summary>Toda a equipe pode usar? Dá para separar as empresas por colaborador?</summary>
+        <p>Sim. A contabilidade pode ter vários usuários, e cada colaborador pode ter a sua própria lista de empresas. Você também define quem pode cadastrar empresas e enviar certificados e quem só pode consultar e baixar notas. Tudo fica registrado na auditoria com o e-mail de quem fez.</p>
+      </details>
+      <details>
+        <summary>Como funciona a cobrança?</summary>
+        <p>Mensal, por CNPJ monitorado, sem limite de notas, em faixas progressivas: até 50 CNPJs R$ 5,00 cada; de 51 a 200, R$ 4,00; de 201 a 500, R$ 3,00; acima de 500, sob consulta. A mensalidade mínima é R$ 99,00 e o plano anual pago à vista tem 10% de desconto.</p>
+      </details>
+      <details>
+        <summary>Tem taxa de implantação?</summary>
+        <p>Sim, um valor fixo de R$ 347,00, cobrado uma única vez.</p>
+      </details>
+      <details>
+        <summary>Tem fidelidade? Como cancelo?</summary>
+        <p>Não há fidelidade. Para cancelar, basta avisar com 30 dias de antecedência.</p>
+      </details>
+      <details>
+        <summary>Como funciona o suporte?</summary>
+        <p>Pelo WhatsApp <a data-wa-sup href="https://wa.me/551239500730">(12) 3950-0730</a> ou pelo e-mail <a href="mailto:suporte@robolabs.digital">suporte@robolabs.digital</a>.</p>
+      </details>
+      <details>
+        <summary>Como é a demonstração?</summary>
+        <p>É ao vivo, com uma contabilidade de teste: você vê o painel, os documentos, o analytics, a conferência fiscal e o ZIP do mês funcionando de verdade, e tira suas dúvidas com a nossa equipe.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA FINAL -->
+<section class="cta-final" id="contato" aria-labelledby="cta-t">
+  <div class="wrap cta-final__in">
+    <h2 id="cta-t">Veja o Robonotas funcionando com uma contabilidade de teste</h2>
+    <p>Agende uma demonstração ao vivo. Em poucos minutos você vê como os XML chegam sozinhos, o que a conferência fiscal aponta e como fica o fechamento do mês.</p>
+    <div class="ctas ctas--center">
+      <a class="btn btn--light" data-wa href="https://wa.me/551239500730">Agendar pelo WhatsApp</a>
+      <a class="btn btn--outline-light" href="tel:+551239500730">Ligar (12) 3950-0730</a>
+      <a class="btn btn--outline-light" href="mailto:contato@robolabs.com.br?subject=Demonstra%C3%A7%C3%A3o%20do%20Robonotas">contato@robolabs.com.br</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <img src="assets/img/icon-robolabs.svg" alt="" width="44" height="42" loading="lazy">
+      <div>
+        <p class="footer__name">Robonotas <span>por Robolabs</span></p>
+        <p>ROBOLABS DESENVOLVIMENTO DE SOFTWARE LTDA<br>CNPJ 47.841.348/0001-75 · São José dos Campos - SP</p>
+      </div>
+    </div>
+    <ul class="footer__links">
+      <li><a data-wa href="https://wa.me/551239500730">WhatsApp (12) 3950-0730 · vendas e suporte</a></li>
+      <li><a href="tel:+551239500730">Telefone (12) 3950-0730</a></li>
+      <li><a href="mailto:contato@robolabs.com.br">Vendas: contato@robolabs.com.br</a></li>
+      <li><a href="mailto:suporte@robolabs.digital">Suporte: suporte@robolabs.digital</a></li>
+      <li><a href="https://www.robolabs.com.br" rel="noopener">www.robolabs.com.br</a></li>
+    </ul>
+  </div>
+  <p class="wrap footer__copy">© <span id="ano">2026</span> Robolabs. Prints do painel com dados fictícios de uma empresa de demonstração.</p>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+  <button class="lightbox__close" type="button" aria-label="Fechar imagem">×</button>
+  <figure>
+    <img src="" alt="">
+    <figcaption></figcaption>
+  </figure>
+</dialog>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
