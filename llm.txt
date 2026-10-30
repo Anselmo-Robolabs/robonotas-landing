@@ -1,0 +1,73 @@
+# Robonotas
+
+> Captação automática de XML (NF-e, CT-e, NFS-e e NFC-e) e apoio à conferência fiscal para escritórios de contabilidade.
+
+Site: https://robonotas.robolabs.com.br/
+Empresa: Robolabs (ROBOLABS DESENVOLVIMENTO DE SOFTWARE LTDA), CNPJ 47.841.348/0001-75, São José dos Campos - SP.
+Site institucional: https://www.robolabs.com.br
+
+## O que é
+
+O Robonotas é um software web da Robolabs para escritórios de contabilidade. Usa o certificado digital A1 de cada empresa atendida para buscar documentos fiscais várias vezes ao dia na SEFAZ e no Ambiente Nacional, respeitando os limites de consulta. Os XML, PDFs e eventos ficam organizados no painel, com ZIP mensal, analytics por empresa, conferência fiscal, retenções e IBS/CBS.
+
+Público-alvo: escritórios de contabilidade no Brasil.
+
+## Documentos captados automaticamente
+
+- NF-e (modelo 55) recebidas
+- CT-e (57) e CT-e OS (67) em que a empresa participa (ex.: como tomadora)
+- NFS-e do padrão nacional (emitidas e tomadas), só em municípios que usam o Ambiente de Dados Nacional
+- NFC-e (65) emitidas por empresas de São Paulo
+- Eventos vinculados (cancelamentos e cartas de correção)
+
+NF-e de saída não são captadas automaticamente: o escritório pode importar XML ou ZIP do ERP pelo painel.
+
+## Funcionalidades
+
+- Captação várias vezes ao dia com o A1 de cada CNPJ
+- Importação manual de XML/ZIP, com validação de assinatura e protocolo
+- PDFs gerados a partir do XML (DANFE, DANFE NFC-e 80 mm, DACTE, DANFSe)
+- Aviso de certificado vencendo (e-mail 60 e 30 dias antes)
+- Painel de consultas SEFAZ/ADN
+- Exportação: XML/PDF individual, CSV/XLSX e ZIP mensal por empresa (tipo / entrada-saída, planilha de lançamentos e resumo)
+- API REST somente leitura, chave por cliente, filtro “alterados desde”; compatível com os demais robôs da Robolabs
+- Vários usuários na contabilidade, cada um com a própria lista de empresas e permissões
+- Analytics por empresa e período: faturamento e compras líquidos, remessas/transferências à parte, tributos destacados e retidos, IBS/CBS, rankings e insights
+- Conferência fiscal (aba do Analytics): 10 verificações em 6 temas (ICMS-ST, CFOP x UF, alíquota e DIFAL, revenda x uso e consumo, NCM, cancelamentos e duplicidades). Apoio à conferência; não substitui a revisão do contador
+- Retenções (selo “Ret.”, filtro, quadro no Analytics) e IBS/CBS por mês (também no ZIP, na API e no DACTE)
+
+## Segurança
+
+Servidor próprio da Robolabs (não nuvem de terceiros), publicação via Cloudflare, login com Cloudflare Access, isolamento por colaborador e auditoria de ações.
+
+## Preços (outubro de 2026)
+
+Cobrança mensal por CNPJ monitorado, sem limite de notas. Faixas progressivas:
+
+- Até 50 CNPJs: R$ 5,00 /CNPJ/mês
+- 51 a 200: R$ 4,00
+- 201 a 500: R$ 3,00
+- Acima de 500: sob consulta
+
+Mensalidade mínima: R$ 99,00. 10% de desconto no plano anual pago à vista. Implantação: R$ 347,00 (única). Sem fidelidade; cancelamento com aviso de 30 dias.
+
+Exemplo: 120 CNPJs = 50 × R$ 5,00 + 70 × R$ 4,00 = R$ 530,00/mês.
+
+## Contato
+
+- Demonstração ao vivo e vendas: WhatsApp +55 12 3950-0730, e-mail contato@robolabs.com.br
+- Suporte: WhatsApp +55 12 3950-0730, e-mail suporte@robolabs.digital
+- Telefone: +55 12 3950-0730
+
+## Páginas
+
+- Home: https://robonotas.robolabs.com.br/
+- Como funciona: https://robonotas.robolabs.com.br/#como-funciona
+- Funcionalidades: https://robonotas.robolabs.com.br/#funcionalidades
+- Analytics: https://robonotas.robolabs.com.br/#analytics
+- Conferência fiscal: https://robonotas.robolabs.com.br/#conferencia
+- Retenções e IBS/CBS: https://robonotas.robolabs.com.br/#tributos
+- Preços: https://robonotas.robolabs.com.br/#precos
+- FAQ: https://robonotas.robolabs.com.br/#faq
+- Contato: https://robonotas.robolabs.com.br/#contato
+- Sitemap: https://robonotas.robolabs.com.br/sitemap.xml
