@@ -4,10 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Robonotas | Captação de XML e conferência fiscal para escritórios de contabilidade</title>
-<meta name="description" content="O Robonotas busca sozinho NF-e, CT-e, NFS-e e NFC-e das empresas que o seu escritório atende, usando o certificado A1 de cada uma. Tudo organizado no painel, com ZIP do mês, analytics, conferência fiscal, retenções e IBS/CBS. A partir de R$ 5,00 por CNPJ, sem limite de notas.">
+<meta name="description" content="O Robonotas busca sozinho NF-e, CT-e, NFS-e e NFC-e das empresas que o seu escritório atende, usando o certificado A1 de cada uma. Tudo organizado no painel, com ZIP do mês, analytics, conferência fiscal, retenções e IBS/CBS. A partir de R$ 3,00 por CNPJ, sem limite de notas.">
 <meta name="theme-color" content="#9133D4">
 <link rel="canonical" href="https://robonotas.robolabs.com.br/">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://robonotas.robolabs.com.br/sitemap.xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://robonotas.robolabs.com.br/">
 <meta property="og:locale" content="pt_BR">
@@ -24,6 +23,7 @@
 <link rel="icon" href="assets/img/icon-robolabs.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,16 +58,17 @@
       "description": "Captação automática de XML (NF-e, CT-e, NFS-e e NFC-e) para escritórios de contabilidade, com painel, exportação mensal, analytics por empresa, conferência fiscal, retenções e IBS/CBS.",
       "publisher": {"@id": "https://www.robolabs.com.br/#org"},
       "offers": {
-        "@type": "Offer",
-        "price": "5.00",
+        "@type": "AggregateOffer",
+        "lowPrice": "3.00",
+        "highPrice": "5.00",
         "priceCurrency": "BRL",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "5.00",
-          "priceCurrency": "BRL",
-          "unitText": "CNPJ por mês (faixa até 50 CNPJs; mensalidade mínima R$ 99)",
-          "billingIncrement": 1
-        }
+        "offerCount": 3,
+        "description": "Preço por CNPJ por mês, sem limite de notas. O valor da faixa vale para todos os CNPJs; mensalidade mínima R$ 99; acima de 500 CNPJs, negociação direta.",
+        "priceSpecification": [
+          {"@type": "UnitPriceSpecification", "price": "5.00", "priceCurrency": "BRL", "unitText": "CNPJ por mês (1 a 50 CNPJs)", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 1, "maxValue": 50}},
+          {"@type": "UnitPriceSpecification", "price": "4.00", "priceCurrency": "BRL", "unitText": "CNPJ por mês (51 a 200 CNPJs; vale para todos os CNPJs)", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 51, "maxValue": 200}},
+          {"@type": "UnitPriceSpecification", "price": "3.00", "priceCurrency": "BRL", "unitText": "CNPJ por mês (201 a 500 CNPJs; vale para todos os CNPJs)", "eligibleQuantity": {"@type": "QuantitativeValue", "minValue": 201, "maxValue": 500}}
+        ]
       }
     }
   ]
@@ -107,6 +108,7 @@
       <p class="eyebrow">Robonotas · para escritórios de contabilidade</p>
       <h1>Os XML das suas empresas chegam <span class="hl">sozinhos</span>. Todo dia.</h1>
       <p class="lead">O Robonotas usa o certificado A1 de cada cliente para buscar NF-e, CT-e, NFS-e e NFC-e direto na SEFAZ e no Ambiente Nacional, várias vezes ao dia. Sua equipe encontra tudo organizado e ainda ganha apoio na conferência: apontamentos fiscais nos XML, tributos destacados, retenções e IBS/CBS por empresa e período.</p>
+      <p class="hero__badge"><strong>Sem limite de notas e com conferência fiscal inclusa</strong><span>Você paga por CNPJ monitorado, não pelo volume de notas.</span></p>
       <div class="ctas">
         <a class="btn" data-wa href="https://wa.me/551239500730">Agendar demonstração</a>
         <a class="btn btn--ghost" href="#precos">Ver preços</a>
@@ -476,27 +478,37 @@
   <div class="wrap">
     <p class="eyebrow">Preços</p>
     <h2 id="preco-t">Preço por CNPJ. Notas ilimitadas.</h2>
-    <p class="sub">Cobrança mensal por empresa monitorada, sem limite de notas. Quanto mais CNPJs, menor o preço das faixas seguintes.</p>
+    <p class="sub">Cobrança mensal por empresa monitorada. Quanto mais CNPJs, menor o preço, e o valor da faixa vale para todos os CNPJs.</p>
+    <div class="price-banner">
+      <strong>Sem limite de notas e com conferência fiscal inclusa</strong>
+      <span>Cada empresa pode ter quantas notas tiver no mês: o preço é só por CNPJ, sem cobrança por volume.</span>
+    </div>
     <div class="pricing">
       <div class="tiers" role="table" aria-label="Faixas de preço por CNPJ">
         <div class="tier" role="row"><span role="cell" class="tier__range">Até 50 CNPJs</span><span role="cell" class="tier__price">R$ 5,00 <small>/CNPJ/mês</small></span></div>
         <div class="tier" role="row"><span role="cell" class="tier__range">51 a 200 CNPJs</span><span role="cell" class="tier__price">R$ 4,00 <small>/CNPJ/mês</small></span></div>
         <div class="tier" role="row"><span role="cell" class="tier__range">201 a 500 CNPJs</span><span role="cell" class="tier__price">R$ 3,00 <small>/CNPJ/mês</small></span></div>
         <div class="tier" role="row"><span role="cell" class="tier__range">Acima de 500 CNPJs</span><span role="cell" class="tier__price tier__price--q">Sob consulta</span></div>
-        <p class="tiers__note">Faixas progressivas: cada faixa tem o seu preço. Exemplo: 120 CNPJs = 50 × R$ 5,00 + 70 × R$ 4,00 = <strong>R$ 530,00/mês</strong>. Mensalidade mínima de R$ 99,00. <strong>10% de desconto</strong> no plano anual pago à vista.</p>
+        <p class="tiers__note"><strong>O valor da faixa vale para todos os CNPJs.</strong> Exemplos: 100 CNPJs = 100 × R$ 4,00 = <strong>R$ 400,00/mês</strong>; 300 CNPJs = 300 × R$ 3,00 = <strong>R$ 900,00/mês</strong>. Mensalidade mínima de R$ 99,00. No <strong>plano anual</strong>, o pagamento continua mensal, com <strong>10% de desconto</strong> na mensalidade e <strong>implantação isenta</strong>.</p>
         <div class="tiers__extra">
-          <div><span>Implantação</span><strong>R$ 347,00</strong><small>valor fixo, cobrado uma vez</small></div>
-          <div><span>Fidelidade</span><strong>Sem fidelidade</strong><small>cancele com aviso prévio de 30 dias</small></div>
+          <div><span>Implantação</span><strong>R$ 347,00</strong><small>no plano mensal, cobrada uma vez; isenta no plano anual</small></div>
+          <div><span>Fidelidade</span><strong>Sem fidelidade</strong><small>Mensal: cancele com aviso prévio de 30 dias. Anual: cancelar desliga a renovação automática, sem aviso prévio.</small></div>
+          <div class="tiers__garantia"><span>Garantia de 7 dias</span><strong>Desistiu? O dinheiro volta.</strong><small>Em qualquer plano, você pode desistir em até 7 dias corridos e recebe o dinheiro de volta, sem aviso prévio (direito de arrependimento do Código de Defesa do Consumidor).</small></div>
         </div>
       </div>
       <form class="calc" id="calc" aria-labelledby="calc-t" onsubmit="return false">
         <h3 id="calc-t">Simule o seu escritório</h3>
         <label for="cnpjs">Quantos CNPJs você quer monitorar?</label>
-        <input id="cnpjs" name="cnpjs" type="number" inputmode="numeric" min="1" max="100000" step="1" value="120">
+        <input id="cnpjs" name="cnpjs" type="number" inputmode="numeric" min="1" max="100000" step="1" value="100">
+        <fieldset class="calc__plan">
+          <legend>Plano</legend>
+          <label><input type="radio" name="plano" value="mensal" checked><span>Mensal</span></label>
+          <label><input type="radio" name="plano" value="anual"><span>Anual <em>−10% + implantação isenta</em></span></label>
+        </fieldset>
         <div class="calc__out" aria-live="polite">
-          <div><span>Mensal</span><strong id="out-mes">R$ 530,00</strong></div>
-          <div><span>Anual à vista (−10%)</span><strong id="out-ano">R$ 5.724,00</strong></div>
-          <p id="out-det" class="calc__det">50 × R$ 5,00 + 70 × R$ 4,00</p>
+          <div><span>Mensalidade</span><strong id="out-mes">R$ 400,00</strong></div>
+          <div><span>Implantação</span><strong id="out-imp">R$ 347,00</strong></div>
+          <p id="out-det" class="calc__det">100 × R$ 4,00 (faixa de 51 a 200 CNPJs) = R$ 400,00/mês. Implantação de R$ 347,00, cobrada uma vez.</p>
         </div>
         <a class="btn btn--block" data-wa href="https://wa.me/551239500730">Falar com a Robolabs</a>
       </form>
@@ -572,15 +584,19 @@
       </details>
       <details>
         <summary>Como funciona a cobrança?</summary>
-        <p>Mensal, por CNPJ monitorado, sem limite de notas, em faixas progressivas: até 50 CNPJs R$ 5,00 cada; de 51 a 200, R$ 4,00; de 201 a 500, R$ 3,00; acima de 500, sob consulta. A mensalidade mínima é R$ 99,00 e o plano anual pago à vista tem 10% de desconto.</p>
+        <p>Mensal, por CNPJ monitorado, sem limite de notas e com conferência fiscal inclusa. O valor da faixa vale para todos os CNPJs: até 50 CNPJs, R$ 5,00 cada; de 51 a 200, R$ 4,00 cada; de 201 a 500, R$ 3,00 cada; acima de 500, negociação direta. Por exemplo, 100 CNPJs ficam em R$ 400,00/mês. A mensalidade mínima é R$ 99,00. No plano anual, o pagamento continua mensal, com 10% de desconto na mensalidade e implantação isenta.</p>
       </details>
       <details>
         <summary>Tem taxa de implantação?</summary>
-        <p>Sim, um valor fixo de R$ 347,00, cobrado uma única vez.</p>
+        <p>No plano mensal, sim: um valor fixo de R$ 347,00, cobrado uma única vez. No plano anual, a implantação é isenta.</p>
       </details>
       <details>
         <summary>Tem fidelidade? Como cancelo?</summary>
-        <p>Não há fidelidade. Para cancelar, basta avisar com 30 dias de antecedência.</p>
+        <p>Não há fidelidade em nenhum plano. No plano mensal, para cancelar, basta avisar com 30 dias de antecedência. No plano anual, não há aviso prévio: cancelar desliga a renovação automática, e só isso é cancelado.</p>
+      </details>
+      <details>
+        <summary>Posso desistir depois de contratar?</summary>
+        <p>Sim. Garantia de 7 dias: em qualquer plano, você pode desistir em até 7 dias corridos e recebe o dinheiro de volta, sem aviso prévio (direito de arrependimento do Código de Defesa do Consumidor).</p>
       </details>
       <details>
         <summary>Como funciona o suporte?</summary>
@@ -599,6 +615,7 @@
   <div class="wrap cta-final__in">
     <h2 id="cta-t">Veja o Robonotas funcionando com uma contabilidade de teste</h2>
     <p>Agende uma demonstração ao vivo. Em poucos minutos você vê como os XML chegam sozinhos, o que a conferência fiscal aponta e como fica o fechamento do mês.</p>
+    <p class="cta-final__garantia">Garantia de 7 dias: desistiu, o dinheiro volta (direito de arrependimento do Código de Defesa do Consumidor).</p>
     <div class="ctas ctas--center">
       <a class="btn btn--light" data-wa href="https://wa.me/551239500730">Agendar pelo WhatsApp</a>
       <a class="btn btn--outline-light" href="tel:+551239500730">Ligar (12) 3950-0730</a>

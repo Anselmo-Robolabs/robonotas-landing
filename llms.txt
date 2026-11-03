@@ -1,0 +1,102 @@
+# Robonotas
+
+> O Robonotas, da Robolabs, é um sistema web para escritórios de contabilidade que busca sozinho NF-e, CT-e, NFS-e e NFC-e das empresas atendidas, usando o certificado A1 de cada uma, várias vezes ao dia na SEFAZ e no Ambiente Nacional. Tudo fica organizado no painel, com ZIP do mês, analytics por empresa, conferência fiscal, retenções e IBS/CBS. Cobrança por CNPJ, a partir de R$ 3,00 por CNPJ, sem limite de notas e com conferência fiscal inclusa.
+
+## Para quem é
+
+- Escritórios de contabilidade que precisam receber, organizar e entregar os XML das empresas que atendem, sem baixar nota por nota em vários portais.
+- Vários usuários na contabilidade, e cada colaborador pode ter a sua própria lista de empresas.
+
+## Como funciona
+
+1. Cadastre a empresa: informe o CNPJ e envie o certificado A1 pelo próprio painel (nada de mandar certificado por e-mail).
+2. O robô capta sozinho: várias vezes ao dia consulta a SEFAZ e o Ambiente Nacional, respeitando os limites de consulta para evitar bloqueio.
+3. Tudo organizado no painel: XML, PDF e eventos (cancelamentos, cartas de correção) vinculados a cada nota, por empresa, tipo e entrada/saída.
+4. Exporte, analise e confira: ZIP do mês com XML, PDF e planilhas, ou o analytics da empresa com totais, tributos, retenções e os apontamentos da conferência fiscal.
+
+## Documentos captados automaticamente
+
+- NF-e (modelo 55) recebidas pela empresa. Quando chega só o resumo, ele é trocado pelo XML completo assim que fica disponível.
+- CT-e (57) e CT-e OS (67) em que a empresa participa, por exemplo como tomadora.
+- NFS-e do padrão nacional, emitidas e tomadas, pelo Ambiente de Dados Nacional (apenas municípios que usam o padrão nacional).
+- NFC-e (65) emitidas por empresas de São Paulo.
+- Eventos vinculados: cancelamentos e cartas de correção ligados à nota certa.
+- NF-e de saída não são captadas automaticamente: podem ser importadas por XML ou ZIP vindo do ERP, com validação de assinatura e protocolo.
+
+## Funcionalidades
+
+- Importação manual de XML/ZIP pelo painel, com validação de assinatura e protocolo.
+- PDFs gerados a partir do XML: DANFE da NF-e, DANFE NFC-e (80 mm), DACTE e DANFSe.
+- Aviso por e-mail 60 e 30 dias antes do vencimento do certificado A1, com link para enviar o certificado renovado.
+- Painel de consultas SEFAZ/ADN: cada consulta feita e o retorno recebido.
+- Exportação: download individual de XML e PDF, listas em CSV/XLSX e ZIP mensal por empresa, organizado por tipo e entrada/saída, com planilha de lançamentos (XLSX) com colunas de retenção e de IBS/CBS e resumo do mês em planilha. A NFS-e entra pela competência; os demais documentos, pela data de emissão.
+- API REST somente leitura, com chave por cliente criada e revogada no painel, documentação e filtro “alterados desde”. O bloco de tributos traz as retenções e o IBS/CBS. 100% compatível via API com os demais robôs da Robolabs.
+- Permissões: você define quem pode cadastrar empresas e certificados e quem só pode consultar e baixar notas.
+
+## Analytics por empresa
+
+- Filtros por empresa, período (mês, trimestre, ano ou intervalo) e entrada/saída; natureza de cada nota identificada pelo CFOP e pela finalidade.
+- Faturamento líquido (vendas menos devoluções de venda) e compras líquidas (compras menos devoluções de compra); remessas, transferências e outras naturezas em card próprio.
+- Comparação com o mês anterior e com o mesmo mês do ano anterior.
+- Tributos destacados, tributos retidos e IBS/CBS por mês.
+- Rankings top 10 em XLSX: fornecedores, clientes, produtos (com NCM), serviços, prestadores, transportadoras e municípios/UF.
+- Insights automáticos: fornecedor ou cliente novo, variação de ±30% (configurável), concentração, notas só com resumo e fora do prazo de ciência.
+
+## Conferência fiscal
+
+Aba do Analytics que, por empresa e período, lê os XML de entrada e de saída e aponta o que merece um segundo olhar. São 10 verificações em 6 temas:
+
+- ICMS-ST: ST destacado com CFOP que não é de ST, e CFOP de ST sem ICMS-ST.
+- CFOP x UF: CFOP incompatível com a UF ou com o destino da operação.
+- Alíquota e DIFAL: alíquota interestadual fora do padrão, venda interestadual a não contribuinte sem DIFAL e compra interestadual de uso e consumo ou ativo.
+- Revenda x uso e consumo: compra que parece de uso e consumo ou ativo (não aponta quando a empresa também vende o item).
+- NCM ausente ou inválido.
+- Cancelamentos e duplicidades: cancelamento fora do prazo ou em outro mês, e possíveis notas duplicadas.
+
+Cada apontamento tem severidade (“erro provável”, “verificar” ou “sugestão”), mostra o encontrado x esperado com link para a nota e o DANFE, pode ser dispensado com motivo (fica registrado quem dispensou) e pode ser exportado em CSV por análise ou XLSX com todas. É um apoio à conferência e não substitui a revisão do contador: usa regras gerais e não considera regimes especiais nem benefícios por UF.
+
+## Retenções e IBS/CBS
+
+- Selo “Ret.” nas listas de NF-e, NFS-e, CT-e e Documentos, com cada imposto retido (base, percentual e valor) ao passar o mouse.
+- Retenções identificadas: ISS retido, IRRF, INSS/CP, PIS, COFINS, CSLL, PIS/COFINS/CSLL somados na NFS-e nacional e ICMS-ST retido no CT-e.
+- Filtro “Com retenção” nas listas e quadros “Tributos destacados” e “Tributos retidos” no Analytics.
+- Quadro “IBS e CBS por mês” com IBS UF, IBS Municipal e CBS destacados nas notas; colunas de IBS/CBS na planilha do ZIP e na API, e IBS/CBS no DACTE.
+
+## Segurança e controle
+
+- Certificado e dados guardados no servidor próprio da Robolabs, não em nuvem de terceiros, com acesso restrito, publicado com segurança pelo Cloudflare.
+- Login no painel web por e-mail, protegido pelo Cloudflare Access.
+- Cada colaborador só enxerga as suas empresas; cada ação fica registrada na auditoria com o e-mail de quem fez.
+
+## Preços
+
+Cobrança mensal por CNPJ monitorado, a partir de R$ 3,00 por CNPJ, sem limite de notas e com conferência fiscal inclusa. O valor da faixa vale para todos os CNPJs (não é progressivo):
+
+- Até 50 CNPJs: R$ 5,00 por CNPJ/mês.
+- De 51 a 200 CNPJs: R$ 4,00 por CNPJ/mês, para todos os CNPJs.
+- De 201 a 500 CNPJs: R$ 3,00 por CNPJ/mês, para todos os CNPJs.
+- Acima de 500 CNPJs: negociação direta (sob consulta).
+- Mensalidade mínima: R$ 99,00.
+- Exemplos: 10 CNPJs = R$ 99,00/mês (mínimo); 100 CNPJs = R$ 400,00/mês; 300 CNPJs = R$ 900,00/mês.
+- Plano mensal: implantação de R$ 347,00, cobrada uma única vez.
+- Plano anual: pagamento mensal, com 10% de desconto na mensalidade e implantação isenta.
+- Sem fidelidade em nenhum plano. Mensal: cancele com aviso prévio de 30 dias. Anual: cancelar desliga a renovação automática, sem aviso prévio (só a renovação é cancelada).
+- Garantia de 7 dias: em qualquer plano, você pode desistir em até 7 dias corridos e recebe o dinheiro de volta, sem aviso prévio (direito de arrependimento do Código de Defesa do Consumidor).
+
+Incluído: todas as funcionalidades atuais, vários usuários, analytics e ZIP mensal, conferência fiscal, retenções e IBS/CBS, API REST somente leitura e suporte por WhatsApp e e-mail.
+
+## Suporte e contato
+
+- Demonstração ao vivo com uma contabilidade de teste, agendada pelo WhatsApp.
+- WhatsApp e telefone (vendas e suporte): (12) 3950-0730 — https://wa.me/551239500730
+- Vendas: contato@robolabs.com.br
+- Suporte: suporte@robolabs.digital
+- Empresa: ROBOLABS DESENVOLVIMENTO DE SOFTWARE LTDA, CNPJ 47.841.348/0001-75, São José dos Campos - SP.
+
+## Links
+
+- [Robonotas (landing page)](https://robonotas.robolabs.com.br/): produto, funcionalidades, preços e dúvidas frequentes
+- [Preços e simulador](https://robonotas.robolabs.com.br/#precos)
+- [Dúvidas frequentes](https://robonotas.robolabs.com.br/#faq)
+- [Robolabs](https://www.robolabs.com.br): site da empresa
+- [Agendar demonstração pelo WhatsApp](https://wa.me/551239500730)
